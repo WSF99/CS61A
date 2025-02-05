@@ -91,7 +91,7 @@ def sum_digits(y):
     """
     result = 0
     while y > 0:
-        result += (y // pow(10, 0)) % 10
+        result += y % 10
         y //= 10
     return result
 
@@ -112,7 +112,7 @@ def double_eights(n):
     False
     """
     while n > 0: 
-        if (n // pow(10, 0)) % 10 == 8 and (n // pow(10, 1) % 10 == 8):
+        if (n % 10) == 8 and (n // pow(10, 1) % 10 == 8):
             return True
         n //= 10
     return False
